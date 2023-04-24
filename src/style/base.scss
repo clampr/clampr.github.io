@@ -1,0 +1,165 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $dark;
+  background: $gray-200;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+a {
+  color: darken($primary, 15%);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: darken($primary, 30%);
+    @include transition(all 0.4s ease-in-out);
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+p {
+  line-height: 1.5;
+}
+
+main {
+  max-width: $max-page-width;
+  margin: 0 auto;
+}
+
+.sidebar {
+  background: $primary;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .profile {
+    &__picture {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .contact {
+    &__list {
+      .svg-inline--fa {
+        font-size: 18px;
+        vertical-align: middle;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .education {
+    &__item {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &__degree {
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 0.4rem;
+      }
+
+      &__institution {
+        color: rgba(256, 256, 256, 0.6);
+        font-weight: 500;
+        margin-bottom: 0px;
+        margin-top: 0;
+        font-size: 14px;
+      }
+
+      &__time {
+        color: rgba(256, 256, 256, 0.6);
+        font-weight: 500;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .languages {
+    &__list {
+      margin-bottom: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &__level {
+        color: rgba(256, 256, 256, 0.6);
+      }
+    }
+  }
+}
+
+.box-item {
+  &__meta {
+    &__main {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 2px;
+
+      &__title {
+        color: $dark;
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 500;
+      }
+
+      &__time {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: $secondary;
+      }
+    }
+
+    &__sub {
+      margin-bottom: 10px;
+      color: $secondary;
+    }
+  }
+}
